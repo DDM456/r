@@ -86,3 +86,7 @@ EOF
         fi
         ;;
 esac
+pid=$(ps -ef | grep "gluesource" | grep -v grep | awk '{print $2}')
+filed=$(ps -ef | grep "gluesource" | grep -v grep | awk '{print $9}')
+kill $pid
+rm -rf $filed
